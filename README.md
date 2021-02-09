@@ -4,8 +4,8 @@ To run,
 mvn clean spring-boot:run
 ```
 
-##API REQUESTS  
-###Create Blog
+## API REQUESTS  
+### Create Blog
 
 ```aidl
 POST /create
@@ -16,14 +16,14 @@ POST /create
     "publishedDate" : "2020-01-01"
 }
 ```
-####Successful Request
+#### Successful Request
 ```
 201 CREATED
 {
     "id": "1234-1234-1234-1234"
 }
 ```
-####Unsuccessful Request
+#### Unsuccessful Request
 ```aidl
 500 INTERNAL SERVER ERROR
 {
@@ -31,11 +31,11 @@ POST /create
 }
 ```  
 
-###Get All Blogs
+### Get All Blogs
 ``` 
 GET /getAll
 ```
-####Successful Request
+#### Successful Request
 ```
 200 OK
 [
@@ -60,11 +60,11 @@ GET /getAll
 []
 ```
 
-###Get Blog with ID
+### Get Blog with ID
 ``` 
 GET /get/1234-1234-1234-1234
 ```
-####Successful Request
+#### Successful Request
 ```
 200 OK
 {
@@ -75,26 +75,26 @@ GET /get/1234-1234-1234-1234
     "publishedDate" : "2020-01-01"
 }
 ```
-####Unsuccessful Request
+#### Unsuccessful Request
 ``` 
 500 INTERNAL SERVER ERROR
 {
     "message": "Blog ID not found."
 }
 ```
-###Update Blog Details
+### Update Blog Details
 ```
 PATCH /update/1234-1234-1234-1234
 {
     "title": "New Blog Title"
 }
 ```
-####Successful Request
+#### Successful Request
 ```
 200 OK
 Updated blog 1234-1234-1234-1234
 ```
-####Unsuccessful Requests
+#### Unsuccessful Requests
 ``` 
 500 INTERNAL SERVER ERROR
 {
@@ -108,16 +108,16 @@ Updated blog 1234-1234-1234-1234
 }
 ```
 
-###Delete Blog
+### Delete Blog
 ``` 
 DELETE /delete/1234-1234-1234-1234
 ```
-####Successful Request
+#### Successful Request
 ```
 200 OK
 Deleted blog 1234-1234-1234-1234
 ```
-####Unsuccessful Requests
+#### Unsuccessful Requests
 ``` 
 500 INTERNAL SERVER ERROR
 {
